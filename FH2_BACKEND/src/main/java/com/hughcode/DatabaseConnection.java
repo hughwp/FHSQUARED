@@ -1,5 +1,4 @@
 package com.hughcode;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -8,11 +7,11 @@ public class DatabaseConnection {
 
     static {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String dbHost = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
+            Class.forName("org.postgresql.Driver");
+            String dbHost = "167.99.0.151";
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://" + dbHost + ":3306/hughs_mini_project",
-                    "root", "n3u3da!"
+                    "jdbc:postgresql://" + dbHost + ":5433/postgres",
+                    "postgres", "FH2"
             );
         } catch (Exception e) {
             e.printStackTrace();
