@@ -1,5 +1,6 @@
 package com.hughcode;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.concurrent.*;
 import com.hughcode.DAO.TransactionPublisherDAO;
 import com.hughcode.Transaction;
@@ -23,6 +24,9 @@ public class Main {
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
+            }
+            catch (SQLException e){
+                System.out.println(e.toString());
             }
         }
     }
