@@ -8,6 +8,8 @@ import com.hughcode.DatabaseConnection;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
+
+
         try{
             Connection connection = DatabaseConnection.getConnection();
         }
