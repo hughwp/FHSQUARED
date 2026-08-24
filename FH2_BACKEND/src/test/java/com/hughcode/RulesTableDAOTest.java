@@ -53,8 +53,9 @@ public class RulesTableDAOTest {
             }
 
         } catch (Exception e) {
-
+            
             e.printStackTrace();
+
         }
     }
 }
