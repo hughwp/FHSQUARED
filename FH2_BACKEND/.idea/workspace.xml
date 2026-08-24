@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11cc33eb-8a74-42b6-9f3f-46ed761273c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/FHSQUARED.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/AlertRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/hughcode/RulesTableDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/DAO/RulesTableDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/DAO/RulesTableDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/DAO/TransactionTableDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/DAO/TransactionTableDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/VelocityRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/VelocityRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hughcode/RulesTableDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hughcode/RulesTableDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="44" />
+    <option name="cachedIndexableFilesCount" value="47" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -39,67 +36,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hughwp&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hughwp/FHSQUARED.git&quot;,
+    &quot;accountId&quot;: &quot;523152bc-a2f6-41ae-b236-1a488b9713fa&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.017824433060444" />
-      <entry key="MS500" value="1.4468925811885205" />
-      <entry key="S2" value="1.8273395814364313" />
-      <entry key="S5" value="2.7033114903936113" />
-      <entry key="S10" value="5.58865494763424" />
-      <entry key="S30" value="12.450943112990776" />
-      <entry key="S60" value="15.753246955928688" />
-      <entry key="M2" value="18.406112731806502" />
-      <entry key="M5" value="23.3065845361388" />
-      <entry key="M10" value="35.18329577524708" />
-      <entry key="M15" value="52.377149569873" />
-      <entry key="M30" value="102.93432691948193" />
-      <entry key="H1" value="177.90861826042695" />
-      <entry key="H2" value="284.97799800528924" />
-      <entry key="H4" value="407.64821634491585" />
-      <entry key="D1" value="611.7038531032805" />
-      <entry key="W1" value="664.4783101506054" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000001563031966" />
+      <entry key="S10" value="1.000886908840917" />
+      <entry key="S30" value="1.3095307102141742" />
+      <entry key="S60" value="2.370800174580948" />
+      <entry key="M2" value="3.985311557358135" />
+      <entry key="M5" value="6.632194489596335" />
+      <entry key="M10" value="12.445585678807412" />
+      <entry key="M15" value="20.952420242213705" />
+      <entry key="M30" value="53.80691656505127" />
+      <entry key="H1" value="125.90857271154775" />
+      <entry key="H2" value="247.81203079001494" />
+      <entry key="H4" value="400.19989235601776" />
+      <entry key="D1" value="674.3318430039036" />
+      <entry key="W1" value="748.4960886735698" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.9607247167298395E-269" />
-      <entry key="S2" value="1.2298640476796717E-67" />
-      <entry key="S5" value="2.616219356548431E-27" />
-      <entry key="S10" value="8.293782976418092E-14" />
-      <entry key="S30" value="1.1239977538444947E-4" />
-      <entry key="S60" value="0.023283000230351" />
-      <entry key="M2" value="0.3402422581993365" />
-      <entry key="M5" value="1.9044798212168317" />
-      <entry key="M10" value="4.693915331450231" />
-      <entry key="M15" value="7.298365395321798" />
-      <entry key="M30" value="12.658283609159868" />
-      <entry key="H1" value="17.845314119654926" />
-      <entry key="H2" value="23.06860433847943" />
-      <entry key="H4" value="29.41496935312385" />
-      <entry key="D1" value="43.08691816357916" />
-      <entry key="W1" value="47.22917464069877" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.8130156991117126E-145" />
+      <entry key="S10" value="4.2728229953173016E-73" />
+      <entry key="S30" value="8.665228219174618E-25" />
+      <entry key="S60" value="1.2053147456844519E-12" />
+      <entry key="M2" value="1.5183870146879066E-6" />
+      <entry key="M5" value="0.008415953250562951" />
+      <entry key="M10" value="0.21569273382940793" />
+      <entry key="M15" value="0.7880985355608339" />
+      <entry key="M30" value="3.9383425330721873" />
+      <entry key="H1" value="10.66448268348665" />
+      <entry key="H2" value="19.471209561684045" />
+      <entry key="H4" value="29.183934912027286" />
+      <entry key="D1" value="48.23429464527733" />
+      <entry key="W1" value="53.9367807467194" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.12159193547297409" />
-      <entry key="MS500" value="0.7562393620045756" />
-      <entry key="S2" value="1.4721574785255287" />
-      <entry key="S5" value="2.531043653103427" />
-      <entry key="S10" value="5.492533657387206" />
-      <entry key="S30" value="12.41436220451553" />
-      <entry key="S60" value="15.756151551648825" />
-      <entry key="M2" value="18.728543715280143" />
-      <entry key="M5" value="25.18961941110779" />
-      <entry key="M10" value="39.85470175374154" />
-      <entry key="M15" value="59.653531214888076" />
-      <entry key="M30" value="115.57448642925443" />
-      <entry key="H1" value="195.74049316026372" />
-      <entry key="H2" value="308.03602425337743" />
-      <entry key="H4" value="437.0550654375103" />
-      <entry key="D1" value="654.7884775130422" />
-      <entry key="W1" value="711.7071193989987" />
+      <entry key="MS100" value="3.047682004154327E-4" />
+      <entry key="MS500" value="0.19805870273124226" />
+      <entry key="S2" value="0.6671115848388844" />
+      <entry key="S5" value="0.8505100816625313" />
+      <entry key="S10" value="0.9230798444987834" />
+      <entry key="S30" value="1.2786558945950854" />
+      <entry key="S60" value="2.3482323964850313" />
+      <entry key="M2" value="3.9689429695900498" />
+      <entry key="M5" value="6.630827957170992" />
+      <entry key="M10" value="12.653148640720682" />
+      <entry key="M15" value="21.731850257764123" />
+      <entry key="M30" value="57.734616350630255" />
+      <entry key="H1" value="136.56178362224122" />
+      <entry key="H2" value="267.27282281559303" />
+      <entry key="H4" value="429.3752550214275" />
+      <entry key="D1" value="722.5635318412689" />
+      <entry key="W1" value="802.4324477472057" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -124,7 +133,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "features/rules.DAO",
+    "git-widget-placeholder": "feature/add-velocity-functionality-for-transaction-dao",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Administrator/Documents/FHSQUARED/FH2_BACKEND",
@@ -134,7 +143,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/home/paul/FM_SQAURED_MAIN/src/main/java/com/hughcode/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
@@ -147,6 +156,14 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="11cc33eb-8a74-42b6-9f3f-46ed761273c2" name="Changes" comment="" />
@@ -158,10 +175,23 @@
       <workItem from="1787510572207" duration="8185000" />
       <workItem from="1787561472266" duration="14396000" />
       <workItem from="1787581844995" duration="449000" />
+      <workItem from="1787604717799" duration="1128000" />
+      <workItem from="1787608428196" duration="2237000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hughcode/DAO/TransactionTableDAO.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
