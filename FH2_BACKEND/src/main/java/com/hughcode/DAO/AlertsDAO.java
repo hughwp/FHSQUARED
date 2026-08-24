@@ -1,24 +1,25 @@
 package com.hughcode.DAO;
 
-import com.hughcode.Alerts;
+import com.hughcode.Alert;
 import com.hughcode.DatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlertsDAO { private connection conn;
+public class AlertsDAO {
+    private Connection conn;
 
     public AlertsDAO() {
         conn = DatabaseConnection.getConnection();
     }
 
-    public void create_alert(Alerts alert) throws SQLException {
+    public int create_Alert(Alert alert) throws SQLException {
 
         String query = """
         INSERT INTO alerts 
-        (transaction_id, rule_id, severity, reason, alert_status, created_at, solved_at)
-                VALUES (?, ?, ?, ?, ?, ?)
+        (transaction_id, rule_id, severity, reason, alert_status)
+                VALUES (?, ?, ?, ?, ?)
                 """;
 
         try (PreparedStatement stmt =
@@ -29,15 +30,6 @@ public class AlertsDAO { private connection conn;
             stmt.setString(3, alert.getSeverity());
             stmt.setString(4, alert.getReason());
             stmt.setString(5, alert.getAlertStatus());
-
-            if (alert.getSolvedAt() != null) {
-                stmt.setTimestamp(
-                        6,
-                        Timestamp.valueOf(alert.getSolvedAt())
-                );
-            } else {
-                stmt.setNull(6, Types.TIMESTAMP);
-            }
 
             stmt.executeUpdate();
 
@@ -55,11 +47,11 @@ public class AlertsDAO { private connection conn;
     // Get one alert by its ID
     public Alert getAlertById(int alertId) throws SQLException {
 
-        String query = ""\"
+        String query = """
         SELECT *
                 FROM alerts
         WHERE alert_id = ?
-        ""\";
+        """;
 
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
 
@@ -68,7 +60,7 @@ public class AlertsDAO { private connection conn;
             try (ResultSet rs = stmt.executeQuery()) {
 
                 if (rs.next()) {
-                    return createAlertFromResultSet(rs);
+                    return mapResultSetToAlert(rs);
                 }
             }
         }
@@ -87,7 +79,7 @@ public class AlertsDAO { private connection conn;
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
-                alerts.add(createAlertFromResultSet(rs));
+                alerts.add(mapResultSetToAlert(rs));
             }
         }
 
@@ -97,11 +89,11 @@ public class AlertsDAO { private connection conn;
     // Update the status of an alert
     public void updateStatus(int alertId, String status) throws SQLException {
 
-        String query = ""\"
+        String query = """
         UPDATE alerts
         SET alert_status = ?
         WHERE alert_id = ?
-        ""\";
+        """;
 
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
 
@@ -110,6 +102,26 @@ public class AlertsDAO { private connection conn;
 
             stmt.executeUpdate();
         }
+    }
+
+    private Alert mapResultSetToAlert(ResultSet rs) throws SQLException{
+
+        Timestamp solvedTimestamp = rs.getTimestamp("solved_at");
+        Timestamp createdTimestamp = rs.getTimestamp("created_at");
+
+        return new Alert(
+                rs.getInt("alert_id"),
+                rs.getInt("rule_id"),
+                rs.getString("transaction_id"),
+                rs.getString("severity"),
+                rs.getString("reason"),
+                rs.getString("alert_status"),
+                createdTimestamp.toLocalDateTime(),
+                solvedTimestamp == null
+                        ? null
+                        : solvedTimestamp.toLocalDateTime()
+        );
+
     }
 
 

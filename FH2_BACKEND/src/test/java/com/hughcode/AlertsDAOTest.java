@@ -1,26 +1,25 @@
 package com.hughcode;
 
-import com.hughcode.DAO.AlertDAO;
 import com.hughcode.DAO.AlertsDAO;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.io.PrintStream;
 
 public class AlertsDAOTest {
-
-
     @Test
     public void AlertTest() {
 
         try {
 
+            // USE ALERTSDAO class
+            AlertsDAO alertsDAO = new AlertsDAO();
+
             System.out.println("=== CREATING TEST ALERT ===");
 
-            Alerts testAlert = new Alerts(
+            Alert testAlert = new Alert(
                     0,
-                    "TXN001",
                     1,
+                    "TXN001",
                     "HIGH",
                     "Velocity threshold exceeded",
                     "OPEN",
@@ -28,15 +27,16 @@ public class AlertsDAOTest {
                     null
             );
 
-            int alertId = AlertsDAO.createAlerts(testAlert);
+            int alertId = alertsDAO.create_Alert(testAlert);
 
             System.out.println("Created alert ID: " + alertId);
 
             System.out.println("\n=== GETTING ALERT ===");
 
-            Alerts retrievedAlert = AlertDAO.getAlertById(alertId);
+            Alert retrievedAlert = alertsDAO.getAlertById(alertId);
 
             assertNotNull(retrievedAlert);
+
             assertEquals("TXN001", retrievedAlert.getTransactionId());
             assertEquals(1, retrievedAlert.getRuleId());
             assertEquals("HIGH", retrievedAlert.getSeverity());
