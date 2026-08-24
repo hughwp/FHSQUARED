@@ -3,6 +3,6 @@ import com.hughcode.Transaction;
 
 public class ThresholdRule implements Rule{
     public boolean evaluate(Transaction transaction){
-        return true;
+        return transaction.amount < 200;
     }
 }
