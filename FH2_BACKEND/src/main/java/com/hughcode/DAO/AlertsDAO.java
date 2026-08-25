@@ -1,6 +1,7 @@
 package com.hughcode.DAO;
 
 import com.hughcode.Alert;
+import com.hughcode.AlertForClient;
 import com.hughcode.DatabaseConnection;
 
 import java.sql.*;
@@ -45,7 +46,7 @@ public class AlertsDAO {
     }
 
     // Get one alert by its ID
-    public Alert getAlertById(int alertId) throws SQLException {
+    public AlertForClient getAlertById(int alertId) throws SQLException {
 
         String query = """
         SELECT *
@@ -69,11 +70,11 @@ public class AlertsDAO {
     }
 
     // Get all alerts
-    public List<Alert> getAllAlerts() throws SQLException {
+    public List<AlertForClient> getAllAlerts() throws SQLException {
 
         String query = "SELECT * FROM alerts";
 
-        List<Alert> alerts = new ArrayList<>();
+        List<AlertForClient> alerts = new ArrayList<>();
 
         try (PreparedStatement stmt = conn.prepareStatement(query);
              ResultSet rs = stmt.executeQuery()) {
@@ -91,25 +92,30 @@ public class AlertsDAO {
 
         String query = """
         UPDATE alerts
-        SET alert_status = ?
+        SET alert_status = ?,
+            solved_at = CASE
+                WHEN UPPER(?) IN ('CLOSED', 'DISMISSED') THEN CURRENT_TIMESTAMP
+                ELSE solved_at
+            END
         WHERE alert_id = ?
         """;
 
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
 
             stmt.setString(1, status);
-            stmt.setInt(2, alertId);
+            stmt.setString(2, status);
+            stmt.setInt(3, alertId);
 
             stmt.executeUpdate();
         }
     }
 
-    private Alert mapResultSetToAlert(ResultSet rs) throws SQLException{
+    private AlertForClient mapResultSetToAlert(ResultSet rs) throws SQLException{
 
         Timestamp solvedTimestamp = rs.getTimestamp("solved_at");
         Timestamp createdTimestamp = rs.getTimestamp("created_at");
 
-        return new Alert(
+        return new AlertForClient(
                 rs.getInt("alert_id"),
                 rs.getInt("rule_id"),
                 rs.getString("transaction_id"),
