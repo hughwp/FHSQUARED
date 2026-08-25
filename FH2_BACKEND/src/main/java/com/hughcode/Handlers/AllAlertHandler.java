@@ -2,6 +2,7 @@ package com.hughcode.Handlers;
 
 import com.google.gson.*;
 import com.hughcode.Alert;
+import com.hughcode.AlertForClient;
 import com.hughcode.DAO.AlertsDAO;
 import com.hughcode.SendResponse;
 import com.sun.net.httpserver.HttpExchange;
@@ -27,7 +28,7 @@ public class AllAlertHandler implements HttpHandler {
     public void handle(HttpExchange exchange) {
         try {
             if ("GET".equals(exchange.getRequestMethod())) {
-                List<Alert> alerts = alertsDAO.getAllAlerts();
+                List<AlertForClient> alerts = alertsDAO.getAllAlerts();
                 SendResponse.sendResponse(exchange, 200, gson.toJson(alerts));
             } else {
                 SendResponse.sendResponse(exchange, 405, "{\"error\":\"Method not allowed\"}");
