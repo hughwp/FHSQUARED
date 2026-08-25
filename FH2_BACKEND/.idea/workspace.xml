@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/ThresholdRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/ThresholdRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" afterDir="false" />
     </list>
+    <list default="true" id="11cc33eb-8a74-42b6-9f3f-46ed761273c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,23 +55,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="3.499439328372787E-40" />
-      <entry key="MS500" value="1.2846939936542455E-8" />
-      <entry key="S2" value="0.01064632999312903" />
-      <entry key="S5" value="0.16250995474577956" />
-      <entry key="S10" value="0.40312674037098856" />
-      <entry key="S30" value="0.7685172393237991" />
-      <entry key="S60" value="1.2416671114238693" />
-      <entry key="M2" value="2.406823988620269" />
-      <entry key="M5" value="6.39152902381251" />
-      <entry key="M10" value="13.958618563157016" />
-      <entry key="M15" value="22.079736237649968" />
-      <entry key="M30" value="51.46379332022239" />
-      <entry key="H1" value="119.72887223276439" />
-      <entry key="H2" value="242.04306795782165" />
-      <entry key="H4" value="400.3440117339912" />
-      <entry key="D1" value="692.9918324047267" />
-      <entry key="W1" value="773.3295205830289" />
+      <entry key="MS100" value="2.105830680417209" />
+      <entry key="MS500" value="5.805109367204403" />
+      <entry key="S2" value="16.626637470445125" />
+      <entry key="S5" value="32.151945140978164" />
+      <entry key="S10" value="46.79830720373896" />
+      <entry key="S30" value="64.64366026309949" />
+      <entry key="S60" value="70.8431645469942" />
+      <entry key="M2" value="74.33207943200375" />
+      <entry key="M5" value="78.9320893935233" />
+      <entry key="M10" value="89.17741081254422" />
+      <entry key="M15" value="98.15762346872748" />
+      <entry key="M30" value="118.0552493206468" />
+      <entry key="H1" value="161.36375649904318" />
+      <entry key="H2" value="243.79260647195565" />
+      <entry key="H4" value="342.5223949496104" />
+      <entry key="D1" value="504.40079738715895" />
+      <entry key="W1" value="545.5956421948615" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
@@ -147,6 +148,35 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.FH2_BACKEND [:com.hughcode.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RulesTableDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;features/rules.DAO&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Documents/FHSQUARED/FH2_BACKEND&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/paul/FM_SQAURED_MAIN/src/main/java/com/hughcode/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }]]></component>
   <component name="RecentsManager">
@@ -191,5 +221,16 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
