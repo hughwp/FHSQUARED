@@ -4,6 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="11cc33eb-8a74-42b6-9f3f-46ed761273c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/Alert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Alert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/ThresholdRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/ThresholdRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" afterDir="false" />
+    </list>
     <list default="true" id="11cc33eb-8a74-42b6-9f3f-46ed761273c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="43" />
+    <option name="cachedIndexableFilesCount" value="47" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -29,6 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hughwp&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hughwp/FHSQUARED.git&quot;,
+    &quot;accountId&quot;: &quot;523152bc-a2f6-41ae-b236-1a488b9713fa&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -54,42 +74,42 @@
       <entry key="W1" value="545.5956421948615" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="5.949643389299146E-121" />
-      <entry key="S5" value="1.1083088508886129E-48" />
-      <entry key="S10" value="1.5999341582873463E-24" />
-      <entry key="S30" value="2.3322200183094986E-8" />
-      <entry key="S60" value="2.6294539508960366E-4" />
-      <entry key="M2" value="0.028256675971649672" />
-      <entry key="M5" value="0.4968752169654603" />
-      <entry key="M10" value="1.3631245776255105" />
-      <entry key="M15" value="1.9347293887880417" />
-      <entry key="M30" value="2.8388807513633374" />
-      <entry key="H1" value="4.032224974338961" />
-      <entry key="H2" value="6.693703505812388" />
-      <entry key="H4" value="11.497410429115197" />
-      <entry key="D1" value="22.89621252984269" />
-      <entry key="W1" value="26.35767617219981" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.000000000000005" />
+      <entry key="S10" value="1.0000000720113722" />
+      <entry key="S30" value="1.0041604994279245" />
+      <entry key="S60" value="1.0648477567945023" />
+      <entry key="M2" value="1.275618783919265" />
+      <entry key="M5" value="1.8823504146400019" />
+      <entry key="M10" value="2.575324558293399" />
+      <entry key="M15" value="3.16929799350827" />
+      <entry key="M30" value="5.719392481014922" />
+      <entry key="H1" value="11.907771021396947" />
+      <entry key="H2" value="20.948437089214828" />
+      <entry key="H4" value="31.27963874844757" />
+      <entry key="D1" value="51.70589716090542" />
+      <entry key="W1" value="57.852248093314984" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.984663773690885" />
-      <entry key="MS500" value="5.741937948290737" />
-      <entry key="S2" value="16.58268517627201" />
-      <entry key="S5" value="32.11895197587873" />
-      <entry key="S10" value="46.774184530981465" />
-      <entry key="S30" value="64.632302456443" />
-      <entry key="S60" value="70.83713827869013" />
-      <entry key="M2" value="74.35653752975814" />
-      <entry key="M5" value="79.42400884782401" />
-      <entry key="M10" value="90.53474413533195" />
-      <entry key="M15" value="100.0869761273081" />
-      <entry key="M30" value="120.88991224696694" />
-      <entry key="H1" value="165.39137193445282" />
-      <entry key="H2" value="250.48048824906982" />
-      <entry key="H4" value="354.0142743921284" />
-      <entry key="D1" value="527.2952636773463" />
-      <entry key="W1" value="571.9530370056834" />
+      <entry key="MS100" value="5.928685958960186E-4" />
+      <entry key="MS500" value="0.22625162004168928" />
+      <entry key="S2" value="0.6977881135793802" />
+      <entry key="S5" value="1.0076375911528301" />
+      <entry key="S10" value="1.310139606613286" />
+      <entry key="S30" value="1.7342630856762578" />
+      <entry key="S60" value="2.2821768776902065" />
+      <entry key="M2" value="3.663640318936853" />
+      <entry key="M5" value="8.256071828628128" />
+      <entry key="M10" value="16.516066659734342" />
+      <entry key="M15" value="25.23200497652313" />
+      <entry key="M30" value="57.16758827291475" />
+      <entry key="H1" value="131.62256830767183" />
+      <entry key="H2" value="262.97945249060973" />
+      <entry key="H4" value="431.61410930757756" />
+      <entry key="D1" value="744.6948929583774" />
+      <entry key="W1" value="831.1813105096257" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -101,6 +121,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.FH2_BACKEND [:com.hughcode.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Administrator/FHSQUARED/FH2_BACKEND",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/paul/FM_SQAURED_MAIN/src/main/java/com/hughcode/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.FH2_BACKEND [:com.hughcode.Main.main()].executor&quot;: &quot;Run&quot;,
@@ -131,24 +178,19 @@
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="FM_SQAURED_MAIN" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="FM_SQAURED_MAIN" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -159,12 +201,26 @@
       <updated>1787499579557</updated>
       <workItem from="1787499583793" duration="4161000" />
       <workItem from="1787510572207" duration="8185000" />
-      <workItem from="1787561472266" duration="11883000" />
+      <workItem from="1787561472266" duration="14396000" />
+      <workItem from="1787581844995" duration="449000" />
+      <workItem from="1787604717799" duration="1128000" />
+      <workItem from="1787608428196" duration="2237000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/hughcode/DAO/TransactionTableDAO.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
