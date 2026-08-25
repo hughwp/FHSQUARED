@@ -40,5 +40,42 @@ public class TransactionTableDAO {
         }
         return 0.0;
     }
+    
+    public static String[] getUniqueAccountIDsInTimeFrame(Transaction transaction, int timeFrame) throws SQLException{
+        String query = "SELECT DISTINCT account_id FROM transactions WHERE timestamp >= NOW() - INTERVAL '" + timeFrame + " minutes'";
+        var resultSet = DatabaseConnection.getConnection().createStatement().executeQuery(query);
+
+        java.util.List<String> accountIds = new java.util.ArrayList<>();
+        while (resultSet.next()) {
+            accountIds.add(resultSet.getString("account_id"));
+        }
+        return accountIds.toArray(new String[0]);
+    }
+
+    public static Transaction getTransactionCountByAccountInTimeFrame(String accountId, int timeFrame) throws SQLException{
+
+        String query = "SELECT * FROM transactions WHERE account_id = '" + accountId + "' AND timestamp >= NOW() - INTERVAL '" + timeFrame + " minutes' ORDER BY timestamp DESC LIMIT 1";
+        var resultSet = DatabaseConnection.getConnection().createStatement().executeQuery(query);
+
+        if (resultSet.next()) {
+            Transaction transaction = new Transaction(
+                    resultSet.getString("transaction_id"),
+                    resultSet.getString("account_id"),
+                    resultSet.getString("payer_fname"),
+                    resultSet.getString("payer_lname"),
+                    resultSet.getString("payee_id"),
+                    resultSet.getString("merchantName"),
+                    resultSet.getDouble("amount"),
+                    resultSet.getString("transaction_type"),
+                    resultSet.getTimestamp("timestamp").toLocalDateTime(),
+                    resultSet.getString("status")
+            );
+            return transaction;
+        }
+        return null;
+    }
+
+
+
 
 }

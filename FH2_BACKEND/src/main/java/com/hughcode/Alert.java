@@ -3,7 +3,6 @@ package com.hughcode;
 import java.time.LocalDateTime;
 
 public class Alert {
-    private int alertId;
     private int ruleId;
     private String transactionId;
     private String severity;
@@ -13,7 +12,6 @@ public class Alert {
     private LocalDateTime solvedAt;
 
     public Alert(int alert_id, int ruleId, String transactionId, String severity, String reason, String alertStatus, LocalDateTime createdAt, LocalDateTime solvedAt) {
-        this.alertId = alertId;
         this.ruleId = ruleId;
         this.transactionId = transactionId;
         this.severity = severity;
@@ -23,12 +21,10 @@ public class Alert {
         this.solvedAt = solvedAt;
     }
 
-    public int getAlertId() {
-        return alertId;
-    }
+
 
     public void setAlertId(int alertId) {
-        this.alertId = alertId;
+
     }
 
     public int getRuleId() {
