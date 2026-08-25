@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11cc33eb-8a74-42b6-9f3f-46ed761273c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Handlers/AllAlertHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Handlers/ChangeAlertStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Handlers/GetTxnByIdHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/SendResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/Alert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Alert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/DAO/TransactionTableDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/DAO/TransactionTableDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/ThresholdRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/ThresholdRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hughcode/rules/TransactionAgainstRules.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="47" />
+    <option name="cachedIndexableFilesCount" value="49" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -54,61 +55,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="3.499439328372787E-40" />
-      <entry key="MS500" value="1.2846939936542455E-8" />
-      <entry key="S2" value="0.01064632999312903" />
-      <entry key="S5" value="0.16250995474577956" />
-      <entry key="S10" value="0.40312674037098856" />
-      <entry key="S30" value="0.7685172393237991" />
-      <entry key="S60" value="1.2416671114238693" />
-      <entry key="M2" value="2.406823988620269" />
-      <entry key="M5" value="6.39152902381251" />
-      <entry key="M10" value="13.958618563157016" />
-      <entry key="M15" value="22.079736237649968" />
-      <entry key="M30" value="51.46379332022239" />
-      <entry key="H1" value="119.72887223276439" />
-      <entry key="H2" value="242.04306795782165" />
-      <entry key="H4" value="400.3440117339912" />
-      <entry key="D1" value="692.9918324047267" />
-      <entry key="W1" value="773.3295205830289" />
+      <entry key="MS100" value="3.311715976666741E-284" />
+      <entry key="MS500" value="2.018620988725652E-57" />
+      <entry key="S2" value="9.188998027398105E-15" />
+      <entry key="S5" value="4.322820329612329E-6" />
+      <entry key="S10" value="0.0035522338320446056" />
+      <entry key="S30" value="0.3164533185294896" />
+      <entry key="S60" value="0.974003539736622" />
+      <entry key="M2" value="1.7092378463332851" />
+      <entry key="M5" value="2.395440432401383" />
+      <entry key="M10" value="2.687763216260003" />
+      <entry key="M15" value="2.8738654221719395" />
+      <entry key="M30" value="4.858930849782524" />
+      <entry key="H1" value="21.308402396969328" />
+      <entry key="H2" value="93.45634108802496" />
+      <entry key="H4" value="259.6975894759789" />
+      <entry key="D1" value="746.3125796827836" />
+      <entry key="W1" value="914.7694171293318" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
       <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.000000000000005" />
-      <entry key="S10" value="1.0000000720113722" />
-      <entry key="S30" value="1.0041604994279245" />
-      <entry key="S60" value="1.0648477567945023" />
-      <entry key="M2" value="1.275618783919265" />
-      <entry key="M5" value="1.8823504146400019" />
-      <entry key="M10" value="2.575324558293399" />
-      <entry key="M15" value="3.16929799350827" />
-      <entry key="M30" value="5.719392481014922" />
-      <entry key="H1" value="11.907771021396947" />
-      <entry key="H2" value="20.948437089214828" />
-      <entry key="H4" value="31.27963874844757" />
-      <entry key="D1" value="51.70589716090542" />
-      <entry key="W1" value="57.852248093314984" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.000000000000266" />
+      <entry key="M10" value="1.000001287050594" />
+      <entry key="M15" value="1.000247446027906" />
+      <entry key="M30" value="1.0600532314735756" />
+      <entry key="H1" value="2.2626190917805657" />
+      <entry key="H2" value="8.362334378189788" />
+      <entry key="H4" value="21.492425006976276" />
+      <entry key="D1" value="58.44323055387772" />
+      <entry key="W1" value="71.4818318025595" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.928685958960186E-4" />
-      <entry key="MS500" value="0.22625162004168928" />
-      <entry key="S2" value="0.6977881135793802" />
-      <entry key="S5" value="1.0076375911528301" />
-      <entry key="S10" value="1.310139606613286" />
-      <entry key="S30" value="1.7342630856762578" />
-      <entry key="S60" value="2.2821768776902065" />
-      <entry key="M2" value="3.663640318936853" />
-      <entry key="M5" value="8.256071828628128" />
-      <entry key="M10" value="16.516066659734342" />
-      <entry key="M15" value="25.23200497652313" />
-      <entry key="M30" value="57.16758827291475" />
-      <entry key="H1" value="131.62256830767183" />
-      <entry key="H2" value="262.97945249060973" />
-      <entry key="H4" value="431.61410930757756" />
-      <entry key="D1" value="744.6948929583774" />
-      <entry key="W1" value="831.1813105096257" />
+      <entry key="MS100" value="5.7009764573707216E-11" />
+      <entry key="MS500" value="0.008936960728154749" />
+      <entry key="S2" value="0.30746625803533656" />
+      <entry key="S5" value="0.6239097318425216" />
+      <entry key="S10" value="0.7932915542441388" />
+      <entry key="S30" value="1.2367552281827923" />
+      <entry key="S60" value="1.9291700400030103" />
+      <entry key="M2" value="2.684260592163857" />
+      <entry key="M5" value="3.3845184264290196" />
+      <entry key="M10" value="3.6821049857718093" />
+      <entry key="M15" value="3.870245021605147" />
+      <entry key="M30" value="5.916658476651859" />
+      <entry key="H1" value="23.568508989172642" />
+      <entry key="H2" value="101.81440034014886" />
+      <entry key="H4" value="281.1842637522092" />
+      <entry key="D1" value="804.7529225706203" />
+      <entry key="W1" value="986.2507348835741" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -131,10 +132,10 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/adding-3-endpoints-boilerplate",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Administrator/FHSQUARED/FH2_BACKEND",
+    "last_opened_file_path": "/home/paul/fh2_cloned",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -175,6 +176,7 @@
       <workItem from="1787581844995" duration="449000" />
       <workItem from="1787604717799" duration="1128000" />
       <workItem from="1787608428196" duration="2237000" />
+      <workItem from="1787645232372" duration="13549000" />
     </task>
     <servers />
   </component>
@@ -186,7 +188,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/hughcode/DAO/TransactionTableDAO.java</url>
-          <line>56</line>
+          <line>118</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
