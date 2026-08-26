@@ -33,7 +33,8 @@ public class TransactionTableDAO {
     }
 
     public static int checkIfPayeeExistsAlready(Transaction transaction) throws SQLException {
-        String query = "SELECT * FROM transactions WHERE payee_id = '" + transaction.payeeId + "'";
+        String query = "SELECT * FROM transactions WHERE payee_id = '" + transaction.payeeId +
+                "' AND account_id = '" + transaction.accountId + "'";
         var resultSet = DatabaseConnection.getConnection().createStatement().executeQuery(query);
         int count = 0;
         while (resultSet.next()) {
@@ -68,8 +69,21 @@ public class TransactionTableDAO {
 
     public static void insertTransaction(Transaction transaction) throws SQLException {
         String query = "INSERT INTO transactions (transaction_id, account_id, payer_fname, payer_lname, payee_id, merchantName, amount, transaction_type, timestamp, status) " +
-                "VALUES ('" + transaction.transactionId + "', '" + transaction.accountId + "', '" + transaction.payerFname + "', '" + transaction.payerLname + "', '" + transaction.payeeId + "', '" + transaction.merchantName + "', " + transaction.amount + ", '" + transaction.transactionType + "', '" + transaction.timestamp + "', '" + transaction.status + "')";
-        DatabaseConnection.getConnection().createStatement().executeUpdate(query);
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        try (var statement = DatabaseConnection.getConnection().prepareStatement(query)) {
+            statement.setString(1, transaction.transactionId);
+            statement.setString(2, transaction.accountId);
+            statement.setString(3, transaction.payerFname);
+            statement.setString(4, transaction.payerLname);
+            statement.setString(5, transaction.payeeId);
+            statement.setString(6, transaction.merchantName);
+            statement.setDouble(7, transaction.amount);
+            statement.setString(8, transaction.transactionType);
+            statement.setObject(9, transaction.timestamp);
+            statement.setString(10, transaction.status);
+            statement.executeUpdate();
+        }
     }
 
     public static double getTotalTransactionInLastDay(Transaction transaction) throws SQLException{

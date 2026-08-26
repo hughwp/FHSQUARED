@@ -22,20 +22,26 @@ public class TransactionAgainstRules {
 
         System.out.println("-----------------------------------------------");
 
-        if (RulesTableDAO.isRuleEnabled(1) && !(thresholdRule.evaluate(transaction))){
-            Alert alert = new Alert(0, 1, transaction.transactionId, "HIGH", "", "OPEN", LocalDateTime.now(), null);
+        if (RulesTableDAO.isRuleEnabled(1) && (thresholdRule.evaluate(transaction) != 0)){
+            double threshold = RulesTableDAO.fetchRuleDataAsDouble(1);
+            String reason = "Threshold exceeded. This customer made a payment of £" + thresholdRule.evaluate(transaction)
+                    + ". Which is over the threshold of £" + threshold + ".";
+            Alert alert = new Alert(0, 1, transaction.transactionId, "HIGH", reason, "OPEN", LocalDateTime.now(), null);
             alertsDAO.create_Alert(alert);
             System.out.println("ALERT CREATED: Threshold Rule violated for transaction " + transaction.transactionId);
         }
 
-        if (RulesTableDAO.isRuleEnabled(3) && !(newPayeeRule.evaluate(transaction))){
-            Alert alert = new Alert(0, 3, transaction.transactionId, "LOW", "", "OPEN", LocalDateTime.now(), null);
+        if (RulesTableDAO.isRuleEnabled(3) && (newPayeeRule.evaluate(transaction) == 1)){
+            String reason = "This is "+transaction.payerFname+"'s first transaction to "+transaction.merchantName+".";
+            Alert alert = new Alert(0, 3, transaction.transactionId, "LOW", reason, "OPEN", LocalDateTime.now(), null);
             alertsDAO.create_Alert(alert);
             System.out.println("ALERT CREATED: New Payee Rule violated for transaction " + transaction.transactionId);
         }
 
-        if (RulesTableDAO.isRuleEnabled(4) && !(dailyLimitRule.evaluate(transaction))){
-            Alert alert = new Alert(0, 4, transaction.transactionId, "HIGH", "", "OPEN", LocalDateTime.now(), null);
+        System.out.println(dailyLimitRule.evaluate(transaction));
+        if (RulesTableDAO.isRuleEnabled(4) && (dailyLimitRule.evaluate(transaction) != 0)){
+            String reason = "This person has made £"+dailyLimitRule.evaluate(transaction)+" of payments from thier account in the last day exceeding the configured daily limit.";
+            Alert alert = new Alert(0, 4, transaction.transactionId, "HIGH", reason, "OPEN", LocalDateTime.now(), null);
             alertsDAO.create_Alert(alert);
             System.out.println("ALERT CREATED: Daily Limit Rule violated for transaction " + transaction.transactionId);
         }

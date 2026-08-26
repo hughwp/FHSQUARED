@@ -21,5 +21,6 @@ public class AlertForClient {
         this.alertStatus = alertStatus;
         this.createdAt = createdAt;
         this.solvedAt = solvedAt;
+
     }
 }

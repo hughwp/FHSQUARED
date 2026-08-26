@@ -29,6 +29,42 @@ public class RulesTableDAO {
         setRuleEnabled(ruleId, true);
     }
 
+    public static String fetchCurrentValueForRule(int ruleId) throws SQLException {
+        String query = "SELECT rule_data FROM alert_rules WHERE rule_id = ?";
+
+        try (var statement = DatabaseConnection.getConnection().prepareStatement(query)) {
+            statement.setInt(1, ruleId);
+
+            try (var resultSet = statement.executeQuery()) {
+                if (!resultSet.next()) {
+                    throw new SQLException("Rule not found");
+                }
+
+                return resultSet.getString("rule_data");
+            }
+        }
+    }
+
+    public static double fetchRuleDataAsDouble(int ruleId) throws SQLException {
+        String ruleData = fetchCurrentValueForRule(ruleId);
+
+        try {
+            return Double.parseDouble(ruleData);
+        } catch (NumberFormatException e) {
+            throw new SQLException("Invalid numeric rule_data for rule_id=" + ruleId, e);
+        }
+    }
+
+    public static void changeRuleData(int ruleId, int ruleData) throws SQLException {
+        String query = "UPDATE alert_rules SET rule_data = ? WHERE rule_id = ?";
+
+        try (var statement = DatabaseConnection.getConnection().prepareStatement(query)) {
+            statement.setInt(1, ruleData);
+            statement.setInt(2, ruleId);
+            statement.executeUpdate();
+        }
+    }
+
     private static void setRuleEnabled(int ruleId, boolean enabled) throws SQLException {
         String query = "UPDATE alert_rules SET enabled = ? WHERE rule_id = ?";
 
@@ -52,6 +88,7 @@ public class RulesTableDAO {
                         resultSet.getInt("rule_id"),
                         resultSet.getString("rule_name"),
                         resultSet.getString("rule_description"),
+                        resultSet.getString("rule_data"),
                         resultSet.getBoolean("enabled")
                 ));
             }

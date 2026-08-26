@@ -6,16 +6,13 @@ import java.sql.SQLException;
 
 public class NewPayeeRule implements Rule {
 
-    public boolean evaluate(Transaction transaction) {
+    public int evaluate(Transaction transaction) {
         int result = 0;
         try {
-             result = TransactionTableDAO.checkIfPayeeExistsAlready(transaction);
-
+            result = TransactionTableDAO.checkIfPayeeExistsAlready(transaction);
         } catch (SQLException e) {
             System.out.println(e.toString());
         }
-
-        return result <= 0;
-
+        return result;
     }
 }
