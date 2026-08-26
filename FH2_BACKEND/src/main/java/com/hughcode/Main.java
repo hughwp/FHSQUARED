@@ -6,7 +6,9 @@ import java.util.concurrent.*;
 import com.hughcode.DAO.TransactionPublisherDAO;
 import com.hughcode.Handlers.AllAlertHandler;
 import com.hughcode.Handlers.ChangeAlertStatus;
+import com.hughcode.Handlers.ChangeRuleDataHandler;
 import com.hughcode.Handlers.DisableRuleHandler;
+import com.hughcode.Handlers.FetchCurrentValueForRuleHandler;
 import com.hughcode.Handlers.EnableRuleHandler;
 import com.hughcode.Handlers.GetRulesHandler;
 import com.hughcode.Handlers.GetTxnByIdHandler;
@@ -53,9 +55,11 @@ public class Main {
         server.createContext("/get_all_alerts", withCorsDisabled(new AllAlertHandler()));
         server.createContext("/get_txn_by_id", withCorsDisabled(new GetTxnByIdHandler()));
         server.createContext("/change_status", withCorsDisabled(new ChangeAlertStatus()));
+        server.createContext("/change_rule_data", withCorsDisabled(new ChangeRuleDataHandler()));
         server.createContext("/get_rules", withCorsDisabled(new GetRulesHandler()));
         server.createContext("/enable_rule", withCorsDisabled(new EnableRuleHandler()));
         server.createContext("/disable_rule", withCorsDisabled(new DisableRuleHandler()));
+        server.createContext("/fetch_current_value_for_rule", withCorsDisabled(new FetchCurrentValueForRuleHandler()));
         server.setExecutor(null);
         server.start();
     }

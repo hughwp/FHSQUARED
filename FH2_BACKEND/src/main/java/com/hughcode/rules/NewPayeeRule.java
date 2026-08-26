@@ -13,6 +13,6 @@ public class NewPayeeRule implements Rule {
         } catch (SQLException e) {
             System.out.println(e.toString());
         }
-        return result;  // ✓ Returns false (alert) for new payees
+        return result;
     }
 }

@@ -1,16 +1,16 @@
 package com.hughcode.rules;
 import com.hughcode.Transaction;
 import com.hughcode.DAO.TransactionTableDAO;
+import com.hughcode.DAO.RulesTableDAO;
 import java.sql.SQLException;
 
 public class DailyLimitRule implements Rule{
 
-    private static final double DAILY_LIMIT = 200000.0;
-
     public int evaluate(Transaction transaction){
         try {
+            double dailyLimit = RulesTableDAO.fetchRuleDataAsDouble(4);
             double totalToday = TransactionTableDAO.getTotalTransactionInLastDay(transaction);
-            return (int) totalToday;
+            return totalToday > dailyLimit ? (int) totalToday : 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return 0;
